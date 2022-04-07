@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/kuliner_navigation"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/itemAdd"
+        android:name="id.ac.ubaya.informatika.ubayakuliner_160419043.view.AddNewPlaceFragment"
+        android:label="fragment_add_new_place"
+        tools:layout="@layout/fragment_add_new_place" />
+    <fragment
+        android:id="@+id/detailPlaceFragment"
+        android:name="id.ac.ubaya.informatika.ubayakuliner_160419043.view.DetailPlaceFragment"
+        android:label="fragment_detail_place"
+        tools:layout="@layout/fragment_detail_place" >
+        <argument android:name="nama"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_detailPlaceFragment_to_editFragment"
+            app:destination="@id/editFragment" />
+        <action
+            android:id="@+id/actionKuliner"
+            app:destination="@id/itemHome" />
+        <argument
+            android:name="tempat"
+            app:argType="string" />
+        <argument
+            android:name="deskripsi"
+            app:argType="string" />
+        <argument
+            android:name="url_gambar"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/callUsFragment"
+        android:name="id.ac.ubaya.informatika.ubayakuliner_160419043.view.CallUsFragment"
+        android:label="fragment_call_us"
+        tools:layout="@layout/fragment_call_us" />
+    <fragment
+        android:id="@+id/editFragment"
+        android:name="id.ac.ubaya.informatika.ubayakuliner_160419043.view.EditFragment"
+        android:label="fragment_edit"
+        tools:layout="@layout/fragment_edit" >
+        <action
+            android:id="@+id/action_editFragment_to_detailPlaceFragment"
+            app:destination="@id/detailPlaceFragment" />
+        <argument android:name="nama"
+            app:argType="string" />
+        <argument android:name="tempat"
+            app:argType="string" />
+        <argument
+            android:name="deskripsi"
+            app:argType="string" />
+        <argument
+            android:name="url"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="id.ac.ubaya.informatika.ubayakuliner_160419043.view.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/actionRegis"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/actionListView"
+            app:destination="@id/itemHome" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="id.ac.ubaya.informatika.ubayakuliner_160419043.view.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register">
+        <action
+            android:id="@+id/actionLogin"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemHome"
+        android:name="id.ac.ubaya.informatika.ubayakuliner_160419043.view.KulinerListFragment"
+        android:label="fragment_kuliner_list"
+        tools:layout="@layout/fragment_kuliner_list" >
+        <action
+            android:id="@+id/actionDetail"
+            app:destination="@id/detailPlaceFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemPerson"
+        android:name="id.ac.ubaya.informatika.ubayakuliner_160419043.view.ProfilFragment"
+        android:label="fragment_profil"
+        tools:layout="@layout/fragment_profil" />
+</navigation>

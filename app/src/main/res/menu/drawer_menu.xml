@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:id="@+id/menuTop">
+        <item
+            android:id="@+id/itemHome"
+            android:checkable="false"
+            android:checked="true"
+            android:icon="@drawable/ic_baseline_home_24"
+            android:title="Home" />
+        <item
+            android:id="@+id/itemAddRecipe"
+            android:checkable="false"
+            android:icon="@drawable/ic_baseline_add_24"
+            android:title="Add Recipe" />
+        <item
+            android:id="@+id/itemProfile"
+            android:checkable="false"
+            android:icon="@drawable/ic_baseline_person_24"
+            android:title="Profile" />
+    </group>
+    <group android:id="@+id/menuBottom">
+        <item
+            android:id="@+id/itemHubungiKami"
+            android:icon="@drawable/ic_baseline_email_24"
+            android:title="Hubungi Kami" />
+        <item
+            android:id="@+id/itemLogin"
+            android:checkable="false"
+            android:icon="@drawable/ic_baseline_login_24"
+            android:title="Sign Out" />
+    </group>
+</menu>
